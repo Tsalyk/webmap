@@ -5,6 +5,9 @@ geolocator = Nominatim(user_agent="WebMap")
 
 
 def main():
+    """
+    Main function which launches whole programe
+    """
     data = user_input()
     year = int(data[0])
     lat = float(data[1][:-1])
@@ -16,6 +19,9 @@ def main():
 
 
 def user_input() -> tuple:
+    """
+    Returns entered year and location
+    """
     year = input("Please enter a year you would like to have a map for: ")
     location = input("Please enter your location (format: lat, long): ").split()
 
@@ -26,6 +32,9 @@ def user_input() -> tuple:
 
 
 def find_nearest_coordinates(year: int, lat: float, long: float) -> list:
+    """
+    Returns 10 nearest coordinates where films were filmed
+    """
     cities = read_file()
     coordinates = []
     
@@ -44,6 +53,10 @@ def find_nearest_coordinates(year: int, lat: float, long: float) -> list:
 
 
 def read_file(path_to_file = 'locations.txt') -> dict:
+    """
+    Returns a dict where keys are years and values
+    are films and locations
+    """
     films_dict = {}
 
     with open(path_to_file, "r") as file:
@@ -77,6 +90,10 @@ def read_file(path_to_file = 'locations.txt') -> dict:
 
 
 def generation_map(coordinates: list):
+    """
+    Generates map from the given coordinates and creates
+    file "webmap" with html code
+    """
     webmap = folium.Map(tiles="Stamen Terrain")
     fg = folium.FeatureGroup(name="Film map")
 
