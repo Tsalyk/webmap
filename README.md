@@ -1,3 +1,6 @@
 # webmap
-![alt text](https://github.com/Tsalyk/webmap/blob/main/screen.png?raw=true)
-try image
+![](https://github.com/Tsalyk/webmap/blob/main/input.png?raw=true)
+Example of input
+
+![](https://github.com/Tsalyk/webmap/blob/main/map.png?raw=true)
+Example of map
