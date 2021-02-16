@@ -52,14 +52,14 @@ def find_nearest_coordinates(year: int, lat: float, long: float) -> list:
     return sorted_coordinates[:10]
 
 
-def read_file(path_to_file = 'locations.txt') -> dict:
+def read_file(path_to_file = 'locations.list') -> dict:
     """
     Returns a dict where keys are years and values
     are films and locations
     """
     films_dict = {}
 
-    with open(path_to_file, "r") as file:
+    with open(path_to_file, "r", errors="ignore") as file:
         line = file.readline().strip()
         while line != "":
             year = line[line.find("(")+1:line.find("(")+5]
