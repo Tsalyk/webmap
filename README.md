@@ -21,5 +21,7 @@ It consists of the doctype string, head and body.
 In the head is written script for style supporting.
 In the body is written script for map functioning.
 
-There are used such tags as <LINK> - to use links,
-<STYLE> - to change style, <VAR> - to highlight variables in the program.
+There are used such tags as:
+LINK - to use links,
+STYLE - to change style,
+VAR - to highlight variables in the program.
